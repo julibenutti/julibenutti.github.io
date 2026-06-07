@@ -686,6 +686,10 @@
         background: #ff4c4c;
       }
 
+      .fill.empty {
+        background: #d5d5d5;
+      }
+
       .score-link {
         border-top: 1px solid var(--line);
         margin: 19px -31px 0;
@@ -1374,9 +1378,9 @@
     <header class="top">
       <div class="top-inner">
         <div class="mast">
-          <div class="brand" aria-label="Trustpilot">
+          <a class="brand" href="https://trutspilot.com/review/julibenutti.com" aria-label="Ir a opiniones de Trustpilot sobre julibenutti.com">
             <img src="../../assets/trustpilot/logo-white.svg" alt="Opiniones de Trustpilot">
-          </div>
+          </a>
           <div class="search">
             <svg class="search-svg" viewBox="0 0 24 24" aria-hidden="true">
               <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle>
@@ -1428,7 +1432,7 @@
                 <div class="claim"><span class="check">✓</span> Perfil reclamado</div>
                 <h1><a class="company-title-link" href="https://julibenutti.com">julibenutti.com</a></h1>
                 <div class="rating-line">
-                  <a href="#opiniones-completas" style="text-decoration: underline;">33 opiniones</a>
+                  <a href="https://trutspilot.com/review/julibenutti.com" style="text-decoration: underline;">33 opiniones</a>
                   <span>·</span>
                   <span class="stars" aria-label="5 estrellas">
                     <img class="stars-img" src="../../assets/trustpilot/stars-5.svg" alt="TrustScore: 5 sobre 5">
@@ -1547,10 +1551,10 @@
                 </div>
                 <div class="bars">
                   <div class="bar-row"><span>5 estrellas</span><span class="bar"><span class="fill" style="width: 95%;"></span></span><span class="bar-pct">95%</span></div>
-                  <div class="bar-row"><span>4 estrellas</span><span class="bar"><span class="fill low" style="width: 3%;"></span></span><span class="bar-pct">3%</span></div>
-                  <div class="bar-row"><span>3 estrellas</span><span class="bar"><span class="fill" style="width: 1%;"></span></span><span class="bar-pct">&lt;1%</span></div>
-                  <div class="bar-row"><span>2 estrellas</span><span class="bar"><span class="fill" style="width: 1%;"></span></span><span class="bar-pct">&lt;1%</span></div>
-                  <div class="bar-row"><span>1 estrella</span><span class="bar"><span class="fill one" style="width: 2%;"></span></span><span class="bar-pct">2%</span></div>
+                  <div class="bar-row"><span>4 estrellas</span><span class="bar"><span class="fill empty" style="width: 0%;"></span></span><span class="bar-pct">0%</span></div>
+                  <div class="bar-row"><span>3 estrellas</span><span class="bar"><span class="fill empty" style="width: 0%;"></span></span><span class="bar-pct">0%</span></div>
+                  <div class="bar-row"><span>2 estrellas</span><span class="bar"><span class="fill empty" style="width: 0%;"></span></span><span class="bar-pct">0%</span></div>
+                  <div class="bar-row"><span>1 estrella</span><span class="bar"><span class="fill empty" style="width: 0%;"></span></span><span class="bar-pct">0%</span></div>
                 </div>
               </div>
               <div class="score-link">¿Cómo se calcula el TrustScore?</div>
@@ -1581,10 +1585,10 @@
             <div class="filter-title">Todas las opiniones</div>
             <p class="filter-subtitle">33 en total</p>
             <div class="filter-line"><span class="filter-checkbox"></span><span>5 estrellas</span><span class="filter-bar"><span class="fill" style="display:block;width:95%;"></span></span><span class="filter-pct">95%</span></div>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>4 estrellas</span><span class="filter-bar"><span class="fill low" style="display:block;width:3%;"></span></span><span class="filter-pct">3%</span></div>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>3 estrellas</span><span class="filter-bar"><span class="fill" style="display:block;width:1%;"></span></span><span class="filter-pct">&lt;1%</span></div>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>2 estrellas</span><span class="filter-bar"><span class="fill" style="display:block;width:1%;"></span></span><span class="filter-pct">&lt;1%</span></div>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>1 estrella</span><span class="filter-bar"><span class="fill one" style="display:block;width:2%;"></span></span><span class="filter-pct">2%</span></div>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>4 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>3 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>2 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>1 estrella</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
             <a class="filter-help" href="#">Cómo clasifica Trustpilot las opiniones dadas las 33 opiniones</a>
           </aside>
 
@@ -1615,7 +1619,7 @@
 
     <footer class="footer">
       <div class="footer-inner">
-        <div class="brand"><img src="../../assets/trustpilot/logo-white.svg" alt="Opiniones de Trustpilot"></div>
+        <a class="brand" href="https://trutspilot.com/review/julibenutti.com" aria-label="Ir a opiniones de Trustpilot sobre julibenutti.com"><img src="../../assets/trustpilot/logo-white.svg" alt="Opiniones de Trustpilot"></a>
         <div class="footer-grid">
           <div><h4>Quiénes somos</h4><ul><li>Sobre nosotros</li><li>Empleo</li><li>Contacto</li><li>Blog</li></ul></div>
           <div><h4>Comunidad</h4><ul><li>Confianza</li><li>Opiniones</li><li>Centro de ayuda</li></ul></div>
