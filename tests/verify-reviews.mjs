@@ -20,8 +20,8 @@ assert.ok(fs.existsSync(dataPath), "profiles data file must exist");
 const reviewIndexHtml = fs.readFileSync(reviewIndexPath, "utf8");
 const usersIndexHtml = fs.readFileSync(usersIndexPath, "utf8");
 
-assert.match(reviewIndexHtml, /assets\/trustpilot\/profiles\.js\?v=single-juli-review-20260606/, "review page must load cache-busted shared profile data");
-assert.match(usersIndexHtml, /assets\/trustpilot\/profiles\.js\?v=single-juli-review-20260606/, "users page must load the same cache-busted shared profile data");
+assert.match(reviewIndexHtml, /assets\/trustpilot\/profiles\.js\?v=single-juli-review-no-dupes-20260607/, "review page must load cache-busted shared profile data");
+assert.match(usersIndexHtml, /assets\/trustpilot\/profiles\.js\?v=single-juli-review-no-dupes-20260607/, "users page must load the same cache-busted shared profile data");
 assert.match(reviewIndexHtml, /<title>Opiniones sobre julibenutti\.com<\/title>/, "browser tab title must match the requested page title");
 assert.match(reviewIndexHtml, /Finanzas y seguros[\s\S]*Inversión y patrimonio[\s\S]*Servicios financieros alternativos[\s\S]*julibenutti\.com/, "breadcrumb must show the requested full category path");
 assert.match(reviewIndexHtml, /class="brand" href="https:\/\/trutspilot\.com\/review\/julibenutti\.com"/, "Trustpilot logo must link to the live review page");
@@ -96,10 +96,19 @@ for (const profile of profiles) {
   assert.doesNotMatch(`${profile.title} ${profile.body} ${profile.reviews.map((r) => `${r.title} ${r.body}`).join(" ")}`, /Sistema Propio|MyFunded|Myfunded|MFF|Louis|Emma|Anah|gracias ike|Agradece la ayuda de Ike|ha sido muy grata/, "review text must not contain stale product/source copy");
 }
 
-const valentinReviews = profiles.filter((profile) => profile.name === "Valentin Silva");
-assert.equal(valentinReviews.length, 2, "Valentin has two separate visible review cards");
-assert.notEqual(valentinReviews[0].profileUrl, valentinReviews[1].profileUrl, "repeated reviewer cards must open review-specific profile URLs");
-assert.ok(valentinReviews.every((profile) => profile.reviews.filter((review) => review.company === "julibenutti.com").length === 1), "Valentin profiles must not duplicate julibenutti.com reviews");
+const duplicateNames = profiles.reduce((names, profile) => {
+  names.set(profile.name, (names.get(profile.name) || 0) + 1);
+  return names;
+}, new Map());
+const repeatedNames = [...duplicateNames.entries()].filter(([, count]) => count > 1).map(([name]) => name);
+assert.deepEqual(repeatedNames, [], "visible review names must not repeat");
+
+const duplicateProfileIds = profiles.reduce((ids, profile) => {
+  ids.set(profile.id, (ids.get(profile.id) || 0) + 1);
+  return ids;
+}, new Map());
+const repeatedProfileIds = [...duplicateProfileIds.entries()].filter(([, count]) => count > 1).map(([id]) => id);
+assert.deepEqual(repeatedProfileIds, [], "visible reviewer profile IDs must not repeat");
 
 if (fs.existsSync(vercelPath)) {
   const vercel = JSON.parse(fs.readFileSync(vercelPath, "utf8"));
