@@ -32,8 +32,11 @@ assert.match(reviewIndexHtml, /class="company-chip" href="https:\/\/julibenutti\
 assert.match(reviewIndexHtml, /<a href="https:\/\/julibenutti\.com">julibenutti\.com<\/a>/, "company contact website must link to julibenutti.com");
 assert.match(reviewIndexHtml, /5 estrellas[\s\S]*bar-pct">95%[\s\S]*4 estrellas[\s\S]*bar-pct">0%[\s\S]*3 estrellas[\s\S]*bar-pct">0%[\s\S]*2 estrellas[\s\S]*bar-pct">0%[\s\S]*1 estrella[\s\S]*bar-pct">0%/, "sidebar rating distribution must show only 5-star percentage and empty lower ratings");
 assert.match(reviewIndexHtml, /Todas las opiniones[\s\S]*5 estrellas[\s\S]*filter-pct">95%[\s\S]*4 estrellas[\s\S]*filter-pct">0%[\s\S]*3 estrellas[\s\S]*filter-pct">0%[\s\S]*2 estrellas[\s\S]*filter-pct">0%[\s\S]*1 estrella[\s\S]*filter-pct">0%/, "full opinions filter must show 0% gray lower ratings");
-assert.match(reviewIndexHtml, /Cómo clasifica Trustpilot las opiniones dadas las 33 opiniones/, "rating classification helper must mention the 33 reviews");
-assert.doesNotMatch(reviewIndexHtml, /width: 96%|>3%<|&lt;1%|>2%/, "old lower-rating percentages must not remain");
+assert.match(reviewIndexHtml, /Cómo clasifica Trustpilot las opiniones/, "rating classification helper must remain visible");
+assert.match(reviewIndexHtml, /class="filter-ratings"[\s\S]*5 estrellas[\s\S]*filter-pct">95%[\s\S]*4 estrellas[\s\S]*filter-pct">0%/, "full opinions distribution must be grouped like Trustpilot");
+assert.match(reviewIndexHtml, /Palabras clave habituales[\s\S]*Sistema propio[\s\S]*Soporte/, "full opinions section must include Trustpilot-style keyword chips");
+assert.match(reviewIndexHtml, /\.list-card \{[\s\S]*background: transparent;[\s\S]*border: 0;[\s\S]*border-radius: 0;/, "generated reviews must render as a flat Trustpilot-style list, not bordered cards");
+assert.doesNotMatch(reviewIndexHtml, /class="experience-card"|width: 96%|>3%<|&lt;1%|>2%/, "old right experience card and lower-rating percentages must not remain");
 assert.doesNotMatch(reviewIndexHtml, /<body class="pixel-perfect-mode">/, "review page must render functional HTML, not only the screenshot layer");
 assert.doesNotMatch(reviewIndexHtml + usersIndexHtml, /MyFunded|Myfunded|MFF|Louis|Emma|Anah|gracias ike|Agradece la ayuda de Ike|ha sido muy grata/, "old source-brand/support copy must not remain in HTML");
 

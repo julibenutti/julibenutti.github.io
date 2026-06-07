@@ -720,159 +720,215 @@
       }
 
       .reviews-section {
-        background: #f5f5f1;
-        border-top: 1px solid #e2e0d8;
-        padding: 40px 0 210px;
+        background: #fff;
+        border-top: 1px solid #d8d8d4;
+        padding: 34px 0 210px;
       }
 
       .reviews-grid {
-        max-width: 1200px;
+        max-width: 980px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 250px minmax(0, 1fr) 280px;
-        gap: 24px;
-      }
-
-      .filter-card,
-      .list-card,
-      .experience-card {
-        background: #fff;
-        border: 1px solid #ddddda;
-        border-radius: 4px;
+        grid-template-columns: 250px minmax(0, 560px);
+        gap: 54px;
+        align-items: start;
       }
 
       .filter-card {
-        padding: 22px 19px;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        padding: 0;
         align-self: start;
       }
 
       .filter-score {
         display: grid;
-        grid-template-columns: 58px minmax(0, 1fr);
-        gap: 12px;
-        padding-bottom: 18px;
-        border-bottom: 1px solid #e1ded8;
-        margin-bottom: 18px;
+        grid-template-columns: 38px minmax(0, 1fr);
+        gap: 8px;
+        align-items: center;
+        padding-bottom: 14px;
+      }
+
+      .filter-score::before {
+        content: "★";
+        color: var(--green);
+        font-size: 32px;
+        line-height: 1;
       }
 
       .filter-score-number {
-        font-size: 38px;
-        line-height: 0.95;
+        display: inline;
+        font-size: 22px;
+        line-height: 1;
         font-weight: 900;
       }
 
       .filter-score-title {
-        font-weight: 800;
-        margin-bottom: 5px;
+        display: none;
       }
 
       .filter-count {
-        color: #555;
-        font-size: 13px;
-        margin-top: 6px;
+        color: #303030;
+        font-size: 12px;
+        margin-top: 2px;
       }
 
       .filter-write {
-        width: 100%;
-        margin-bottom: 22px;
+        display: none;
       }
 
       .filter-title {
-        font-size: 20px;
+        font-size: 24px;
+        line-height: 1.1;
         font-weight: 800;
-        margin-bottom: 4px;
+        margin-bottom: 7px;
       }
 
       .filter-subtitle {
-        color: #555;
-        font-size: 14px;
-        margin: 0 0 15px;
+        color: #333;
+        font-size: 13px;
+        margin: 0 0 18px;
+      }
+
+      .filter-subtitle a {
+        color: #1f4bd8;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      .filter-ratings {
+        background: #fff;
+        border: 1px solid #d8d8d4;
+        border-radius: 12px;
+        padding: 13px 16px;
+        margin-bottom: 17px;
       }
 
       .filter-line {
         display: grid;
-        grid-template-columns: 16px 72px minmax(0, 1fr) 34px;
+        grid-template-columns: 17px 72px minmax(0, 1fr) 34px;
         align-items: center;
         gap: 8px;
-        padding: 8px 0;
-        font-size: 13px;
+        padding: 4px 0;
+        font-size: 12px;
       }
 
       .filter-checkbox {
         width: 16px;
         height: 16px;
-        border: 1px solid #b7b7b3;
-        border-radius: 2px;
+        border: 1px solid #a6a6a2;
+        border-radius: 3px;
         background: #fff;
       }
 
       .filter-bar {
         height: 8px;
-        background: #e5e5e5;
+        background: #efefec;
         border-radius: 999px;
         overflow: hidden;
       }
 
       .filter-pct {
-        color: #555;
+        color: #222;
         text-align: right;
         white-space: nowrap;
       }
 
       .filter-help {
         display: inline-block;
-        color: #555;
-        font-size: 13px;
-        font-weight: 700;
-        margin-top: 15px;
+        color: #111;
+        font-size: 12px;
+        font-weight: 600;
+        margin-top: 8px;
         text-decoration: underline;
+        text-underline-offset: 2px;
       }
 
       .main-list {
         display: grid;
-        gap: 16px;
+        gap: 0;
       }
 
       .policy-alert {
-        background: #fff8e8;
-        border: 1px solid #e1d6b7;
-        border-radius: 4px;
-        padding: 16px 18px;
-        font-size: 14px;
-        line-height: 1.4;
+        background: #c8f1f5;
+        border: 0;
+        border-radius: 3px;
+        padding: 18px 26px;
+        font-size: 12px;
+        line-height: 1.35;
+        margin-bottom: 20px;
       }
 
       .tools-row {
         display: grid;
-        grid-template-columns: minmax(0, 1fr) 130px 150px;
-        gap: 12px;
+        grid-template-columns: repeat(2, max-content);
+        gap: 16px 12px;
+        margin-bottom: 20px;
       }
 
-      .input-like,
-      .select-like {
-        height: 46px;
+      .input-like {
+        grid-column: 1 / -1;
+        width: 100%;
+        height: 44px;
         border: 1px solid #cfcfcc;
-        border-radius: 3px;
+        border-radius: 999px;
         background: #fff;
         display: flex;
         align-items: center;
-        padding: 0 14px;
+        padding: 0 18px;
         color: #666;
         font-size: 14px;
       }
 
       .select-like {
-        justify-content: space-between;
+        height: 38px;
+        border: 1px solid #d4d4d0;
+        border-radius: 999px;
+        background: #fff;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 0 18px;
         color: #222;
+        font-size: 13px;
+        font-weight: 500;
+      }
+
+      .keyword-block {
+        margin-bottom: 28px;
+      }
+
+      .keyword-title {
+        font-size: 13px;
         font-weight: 700;
+        margin-bottom: 11px;
+      }
+
+      .keyword-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .keyword-chip {
+        border: 1px solid #d4d4d0;
+        border-radius: 999px;
+        padding: 8px 15px;
+        font-size: 12px;
+        line-height: 1;
+        background: #fff;
       }
 
       .list-card {
-        padding: 20px;
+        background: transparent;
+        border: 0;
+        border-radius: 0;
+        padding: 0 0 42px;
       }
 
       .list-card.generated {
-        min-height: 178px;
+        min-height: 0;
       }
 
       .profile-link {
@@ -886,8 +942,8 @@
       .rating-stars {
         display: inline-grid;
         grid-template-columns: repeat(5, 16px);
-        gap: 2px;
-        margin: 2px 0;
+        gap: 1px;
+        margin: 8px 0 7px;
       }
 
       .rating-star {
@@ -919,18 +975,36 @@
       .list-head {
         display: flex;
         justify-content: space-between;
+        align-items: flex-start;
+        gap: 16px;
+        margin-bottom: 6px;
+      }
+
+      .list-card .author {
+        grid-template-columns: 44px minmax(0, 1fr);
         gap: 12px;
-        margin-bottom: 14px;
       }
 
       .date {
-        color: #666;
-        font-size: 13px;
+        color: #555;
+        font-size: 12px;
+        white-space: nowrap;
       }
 
       .review-title {
         font-weight: 800;
-        margin: 10px 0 6px;
+        margin: 0 0 8px;
+      }
+
+      .review-pill {
+        display: inline-block;
+        background: #e8e8e6;
+        border-radius: 3px;
+        padding: 4px 7px;
+        margin: 8px 5px 0 0;
+        color: #333;
+        font-size: 11px;
+        line-height: 1;
       }
 
       .pagination {
@@ -959,44 +1033,6 @@
         background: #1a5cf0;
         border-color: #1a5cf0;
         color: #fff;
-      }
-
-      .experience-card {
-        padding: 22px;
-        align-self: start;
-        line-height: 1.45;
-      }
-
-      .experience-brand {
-        display: flex;
-        align-items: center;
-        gap: 7px;
-        margin-bottom: 18px;
-        font-size: 20px;
-      }
-
-      .brand-star {
-        color: var(--green);
-        font-size: 25px;
-        line-height: 1;
-      }
-
-      .experience-card h3 {
-        margin: 0 0 10px;
-        font-size: 19px;
-      }
-
-      .experience-row {
-        display: flex;
-        justify-content: space-between;
-        gap: 10px;
-        padding: 15px 0;
-        border-top: 1px solid #e2e0dc;
-        font-weight: 700;
-      }
-
-      .experience-row span:last-child {
-        color: #6a6a65;
       }
 
       .footer {
@@ -1574,8 +1610,9 @@
         <div class="reviews-grid">
           <aside class="filter-card">
             <div class="filter-score">
-              <div class="filter-score-number">4,9</div>
               <div>
+                <span class="filter-score-number">4,9</span>
+                <span class="info-dot">i</span>
                 <div class="filter-score-title">Excelente</div>
                 <img class="stars-img rail-stars" src="../../assets/trustpilot/stars-5.svg" alt="TrustScore: 5 sobre 5">
                 <div class="filter-count">33 opiniones</div>
@@ -1583,36 +1620,38 @@
             </div>
             <a class="btn primary filter-write" href="#">✎ Escribir una opinión</a>
             <div class="filter-title">Todas las opiniones</div>
-            <p class="filter-subtitle">33 en total</p>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>5 estrellas</span><span class="filter-bar"><span class="fill" style="display:block;width:95%;"></span></span><span class="filter-pct">95%</span></div>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>4 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>3 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>2 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
-            <div class="filter-line"><span class="filter-checkbox"></span><span>1 estrella</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
-            <a class="filter-help" href="#">Cómo clasifica Trustpilot las opiniones dadas las 33 opiniones</a>
+            <p class="filter-subtitle">33 en total · <a href="#">Escribir una opinión</a></p>
+            <div class="filter-ratings">
+              <div class="filter-line"><span class="filter-checkbox"></span><span>5 estrellas</span><span class="filter-bar"><span class="fill" style="display:block;width:95%;"></span></span><span class="filter-pct">95%</span></div>
+              <div class="filter-line"><span class="filter-checkbox"></span><span>4 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
+              <div class="filter-line"><span class="filter-checkbox"></span><span>3 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
+              <div class="filter-line"><span class="filter-checkbox"></span><span>2 estrellas</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
+              <div class="filter-line"><span class="filter-checkbox"></span><span>1 estrella</span><span class="filter-bar"><span class="fill empty" style="display:block;width:0%;"></span></span><span class="filter-pct">0%</span></div>
+            </div>
+            <a class="filter-help" href="#">Cómo clasifica Trustpilot las opiniones ↗</a>
           </aside>
 
           <div class="main-list">
-            <div class="policy-alert"><strong>Trustpilot no permite ofrecer incentivos por opiniones.</strong> Las valoraciones se revisan para proteger la integridad de la plataforma.</div>
+            <div class="policy-alert"><strong>Trustpilot no permite a las empresas ofrecer incentivos ni pagar para ocultar opiniones.</strong> Las opiniones son propiedad de los usuarios y no de Trustpilot. <a href="#">Más información</a></div>
             <div class="tools-row">
               <div class="input-like">⌕ Buscar opiniones</div>
               <div class="select-like">Más filtros <span>⌄</span></div>
               <div class="select-like">Más recientes <span>⌄</span></div>
             </div>
+            <div class="keyword-block">
+              <div class="keyword-title">Palabras clave habituales</div>
+              <div class="keyword-chips">
+                <span class="keyword-chip">IA</span>
+                <span class="keyword-chip">Algoritmo</span>
+                <span class="keyword-chip">Trading</span>
+                <span class="keyword-chip">Backtesting</span>
+                <span class="keyword-chip">Reglas</span>
+                <span class="keyword-chip">Claude</span>
+                <span class="keyword-chip">Sistema propio</span>
+                <span class="keyword-chip">Soporte</span>
+              </div>
+            </div>
           </div>
-
-          <aside class="experience-card">
-            <div class="experience-brand"><span class="brand-star">★</span><strong>Trustpilot</strong></div>
-            <h3>La experiencia Trustpilot</h3>
-            <p>Las opiniones ayudan a otras personas a comparar empresas y entender experiencias reales antes de decidir.</p>
-            <div class="experience-row"><span>Todo el mundo es bienvenido</span><span>⌄</span></div>
-            <div class="experience-row"><span>Promovemos las opiniones verificadas</span><span>⌄</span></div>
-            <div class="experience-row"><span>Luchamos contra las reseñas falsas</span><span>⌄</span></div>
-            <div class="experience-row"><span>Mostramos opiniones recientes</span><span>⌄</span></div>
-            <div class="experience-row"><span>Fomentamos el feedback constructivo</span><span>⌄</span></div>
-            <div class="experience-row"><span>Verificamos a los revisores</span><span>⌄</span></div>
-            <div class="experience-row"><span>Combatimos el sesgo</span><span>⌄</span></div>
-          </aside>
         </div>
       </section>
     </main>
@@ -1686,7 +1725,8 @@
         if (mainList) {
           const visibleProfiles = (window.trustpilotCloneData || []).slice(0, 33);
           mainList.querySelectorAll(".list-card, .pagination, .visible-cap").forEach((item) => item.remove());
-          document.querySelector(".filter-subtitle").textContent = `${visibleProfiles.length} visibles de 33`;
+          const filterSubtitle = document.querySelector(".filter-subtitle");
+          if (filterSubtitle) filterSubtitle.innerHTML = `${visibleProfiles.length} en total · <a href="#">Escribir una opinión</a>`;
 
           visibleProfiles.forEach((profile, index) => {
             const primaryReview = profile.reviews?.[0] || profile;
@@ -1703,8 +1743,8 @@
               </div>
               <div class="rating-stars" aria-label="${primaryReview.rating} estrellas">${renderStars(primaryReview.rating)}</div>
               <div class="review-title">${escapeHTML(primaryReview.title)}</div>
-              <p class="mini-text" style="margin-bottom: 10px;">${escapeHTML(primaryReview.body)}</p>
-              <div class="meta-line date">${escapeHTML(primaryReview.date || profile.experienceDate)} · ${escapeHTML(primaryReview.type || "Opinión espontánea")}</div>
+              <p class="mini-text" style="margin-bottom: 2px;">${escapeHTML(primaryReview.body)}</p>
+              <div class="meta-line date"><span class="review-pill">${escapeHTML(primaryReview.date || profile.experienceDate)}</span><span class="review-pill">${escapeHTML(primaryReview.type || "Opinión espontánea")}</span></div>
               <div class="review-actions"><span>♧ Útil</span><span>⌘ Compartir</span><a href="${escapeHTML(profile.profileUrl)}">Ver perfil</a></div>
             `;
             mainList.appendChild(article);
