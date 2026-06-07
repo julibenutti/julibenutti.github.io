@@ -1,0 +1,1723 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Opiniones sobre julibenutti.com</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2300b67a' d='M16 1.5l3.7 10.1h10.8l-8.7 6.4 3.4 10.5-9.2-6.3-9.2 6.3 3.4-10.5-8.7-6.4h10.8z'/%3E%3C/svg%3E">
+    <style>
+      @font-face {
+        font-display: swap;
+        font-family: "Trustpilot Sans";
+        font-style: normal;
+        font-weight: 300 700;
+        src: url("../../assets/trustpilot/fonts/Trustpilot-Sans.woff2") format("woff2");
+      }
+
+      @font-face {
+        font-display: swap;
+        font-family: "Trustpilot Display";
+        font-style: normal;
+        font-weight: 800;
+        src: url("../../assets/trustpilot/fonts/Trustpilot-Display-Extrabold.woff2") format("woff2");
+      }
+
+      :root {
+        --ink: #2d2f29;
+        --muted: #605e56;
+        --line: #dcd6d1;
+        --bg: #f9f8f5;
+        --panel: #fffffe;
+        --green: #00b67a;
+        --blue: #3c57bc;
+        --black: #1b1a1b;
+        --pale-blue: #c8f1f5;
+        --soft: #fbfaf3;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Trustpilot Sans", Arial, Helvetica, sans-serif;
+        letter-spacing: 0;
+      }
+
+      .pixel-shell {
+        display: none;
+      }
+
+      body.pixel-perfect-mode {
+        background: #fff;
+      }
+
+      body.pixel-perfect-mode .pixel-shell {
+        display: block;
+        width: 100%;
+        min-height: 100vh;
+        background: #fff;
+      }
+
+      body.pixel-perfect-mode .pixel-shot {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+
+      body.pixel-perfect-mode .pixel-mobile {
+        display: none;
+      }
+
+      body.pixel-perfect-mode .top,
+      body.pixel-perfect-mode .shell,
+      body.pixel-perfect-mode .footer {
+        display: none !important;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .top {
+        background: var(--black);
+        color: #fff;
+      }
+
+      .top-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0;
+      }
+
+      .mast {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        height: 72px;
+        padding: 0 80px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        width: 140px;
+        height: 34px;
+        white-space: nowrap;
+      }
+
+      .brand img {
+        width: 140px;
+        height: auto;
+        display: block;
+      }
+
+      .search {
+        flex: 0 0 451px;
+        min-width: 0;
+        height: 48px;
+        background: var(--panel);
+        border-radius: 8px;
+        color: #777;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0 15px;
+        font-size: 16px;
+      }
+
+      .search-svg {
+        width: 20px;
+        height: 20px;
+        color: #404040;
+        flex: 0 0 auto;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        font-size: 14px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .bell {
+        width: 22px;
+        height: 22px;
+        border: 2px solid #e8e8e8;
+        border-top-color: transparent;
+        border-radius: 11px 11px 7px 7px;
+        position: relative;
+      }
+
+      .bell::after {
+        content: "";
+        width: 6px;
+        height: 2px;
+        background: #e8e8e8;
+        position: absolute;
+        bottom: -5px;
+        left: 6px;
+        border-radius: 99px;
+      }
+
+      .business {
+        background: #7998ff;
+        color: #05153e;
+        border-radius: 999px;
+        padding: 16px 24px;
+      }
+
+      .mobile-icons {
+        display: none;
+        align-items: center;
+        gap: 20px;
+        margin-left: auto;
+        color: #86a6ff;
+      }
+
+      .mobile-bell {
+        width: 22px;
+        height: 22px;
+        display: block;
+        color: #86a6ff;
+      }
+
+      .mobile-icons .search-svg {
+        width: 22px;
+        height: 22px;
+        color: #86a6ff;
+      }
+
+      .hamb {
+        width: 19px;
+        display: grid;
+        gap: 5px;
+      }
+
+      .hamb span {
+        height: 2px;
+        background: #86a6ff;
+      }
+
+      .breadcrumbs {
+        width: 1200px;
+        height: 49px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 16px 0;
+        font-size: 12px;
+        font-weight: 700;
+        color: #f4f4f4;
+        white-space: nowrap;
+      }
+
+      .crumb-dots {
+        display: none;
+        color: #86a6ff;
+        font-size: 22px;
+        letter-spacing: 2px;
+      }
+
+      .shell {
+        background: var(--panel);
+        border-radius: 16px 16px 0 0;
+        margin-top: 0;
+        min-height: 1200px;
+      }
+
+      .content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 40px 0 220px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 370px;
+        gap: 73px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 122px minmax(0, 1fr);
+        gap: 26px;
+        padding-bottom: 34px;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .company-logo-link {
+        display: block;
+        width: 122px;
+        height: 80px;
+        border-radius: 4px;
+      }
+
+      .company-logo {
+        width: 122px;
+        height: 80px;
+        border-radius: 4px;
+        object-fit: contain;
+        display: block;
+        background: #fff;
+        border: 1px solid var(--line);
+      }
+
+      .claim {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        height: 23px;
+        padding: 0 6px;
+        border: 1px solid var(--line);
+        border-radius: 2px;
+        color: #303030;
+        font-size: 11px;
+        margin-bottom: 15px;
+      }
+
+      .check {
+        color: #008f5d;
+      }
+
+      h1 {
+        margin: 0;
+        font-family: "Trustpilot Display", "Trustpilot Sans", Arial, sans-serif;
+        font-size: 35px;
+        line-height: 1.04;
+        font-weight: 800;
+      }
+
+      .company-title-link {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .company-title-link:hover {
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .rating-line {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 8px;
+        font-size: 16px;
+      }
+
+      .stars {
+        display: inline-flex;
+        align-items: center;
+        gap: 0;
+      }
+
+      .stars-img {
+        display: block;
+        width: 93px;
+        height: 18px;
+      }
+
+      .stars-img.small {
+        width: 84px;
+        height: 16px;
+      }
+
+      .stars-img.rail-stars {
+        width: 94px;
+        height: 18px;
+      }
+
+      .info-dot {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #4054b7;
+        color: #4054b7;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .category {
+        color: #2d49bf;
+        display: inline-block;
+        margin-top: 8px;
+        font-size: 17px;
+      }
+
+      .actions {
+        display: flex;
+        gap: 8px;
+        margin-top: 14px;
+      }
+
+      .btn {
+        border: 1px solid #3652ce;
+        border-radius: 999px;
+        height: 44px;
+        padding: 0 25px;
+        font-weight: 800;
+        font-size: 14px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        color: #2e48c6;
+        background: #fff;
+      }
+
+      .btn.primary {
+        background: var(--blue);
+        color: #fff;
+        min-width: 200px;
+      }
+
+      .notice {
+        margin-top: 15px;
+        border: 1px solid #dedbd2;
+        background: var(--panel);
+        border-radius: 6px;
+        min-height: 74px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 15px 18px;
+        font-weight: 700;
+        line-height: 1.45;
+      }
+
+      .shield {
+        width: 25px;
+        height: 30px;
+        flex: 0 0 auto;
+        display: block;
+      }
+
+      .review-preview {
+        margin-top: 27px;
+      }
+
+      .review-preview h2 {
+        margin-bottom: 44px;
+      }
+
+      h2 {
+        margin: 0 0 30px;
+        font-size: 25px;
+        line-height: 1.2;
+        font-weight: 575;
+      }
+
+      .mini-reviews {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 76px;
+      }
+
+      .review-mini {
+        min-width: 0;
+        display: block;
+        color: inherit;
+        cursor: pointer;
+      }
+
+      .review-mini:hover strong,
+      .review-mini:hover .more {
+        text-decoration: underline;
+      }
+
+      .author {
+        display: grid;
+        grid-template-columns: 44px minmax(0, 1fr);
+        gap: 9px;
+        align-items: center;
+        margin-bottom: 16px;
+      }
+
+      .avatar {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: #cafad1;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        color: #1d3320;
+      }
+
+      .avatar.purple {
+        background: #5a32ba;
+        color: #fff;
+      }
+
+      .avatar.blue {
+        background: #2447c6;
+        color: #fff;
+      }
+
+      .avatar.orange {
+        background: #ffbf72;
+        color: #2a241b;
+      }
+
+      .author strong {
+        display: block;
+        font-size: 16px;
+      }
+
+      .author span {
+        color: var(--muted);
+        font-size: 15px;
+      }
+
+      .mini-text {
+        margin: 9px 0 28px;
+        font-size: 16px;
+        line-height: 1.45;
+      }
+
+      .more {
+        color: #2c4bcc;
+        font-weight: 700;
+      }
+
+      .review-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .reviews-more {
+        margin-top: 32px;
+      }
+
+      .company-info {
+        margin-top: 42px;
+        padding-top: 32px;
+        border-top: 1px solid var(--line);
+      }
+
+      .company-info h2 {
+        margin-bottom: 22px;
+      }
+
+      .company-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 28px;
+      }
+
+      .company-panel {
+        min-width: 0;
+      }
+
+      .company-chip {
+        display: inline-flex;
+        align-items: center;
+        border: 1px solid #cfd3c9;
+        border-radius: 4px;
+        padding: 6px 10px;
+        color: #2b4acb;
+        font-size: 14px;
+        font-weight: 700;
+        margin-bottom: 18px;
+      }
+
+      .company-panel h3 {
+        margin: 0 0 12px;
+        font-size: 18px;
+      }
+
+      .company-panel p {
+        margin: 0;
+        color: #474946;
+        font-size: 15px;
+        line-height: 1.55;
+      }
+
+      .info-list {
+        display: grid;
+        gap: 13px;
+        color: #333;
+        font-size: 15px;
+      }
+
+      .info-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 11px;
+      }
+
+      .info-row a {
+        color: inherit;
+        text-decoration: underline;
+        text-underline-offset: 2px;
+      }
+
+      .info-row a:hover {
+        color: var(--blue);
+      }
+
+      .rail {
+        display: grid;
+        gap: 13px;
+        align-content: start;
+      }
+
+      .important {
+        border: 1px solid rgb(0, 104, 142);
+        border-radius: 16px;
+        overflow: hidden;
+        background: var(--panel);
+      }
+
+      .important-head {
+        background: var(--pale-blue);
+        padding: 15px 24px;
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        font-size: 19px;
+        font-weight: 575;
+      }
+
+      .important-body {
+        padding: 18px 24px;
+        min-height: 73px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 14px;
+        line-height: 1.35;
+      }
+
+      .score-card,
+      .rail-card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        box-shadow: rgba(0, 0, 0, 0.14) 0px 3px 9px 0px;
+      }
+
+      .score-card {
+        padding: 29px 31px 0;
+      }
+
+      .score-top {
+        display: grid;
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 22px;
+      }
+
+      .score-number {
+        font-family: "Trustpilot Display", "Trustpilot Sans", Arial, sans-serif;
+        font-size: 50px;
+        line-height: 0.92;
+        font-weight: 900;
+      }
+
+      .excellent {
+        font-weight: 800;
+        margin: 4px 0 7px;
+      }
+
+      .tiny .star-box {
+        width: 14px;
+        height: 14px;
+        font-size: 10px;
+      }
+
+      .count {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+
+      .bars {
+        display: grid;
+        gap: 11px;
+        font-size: 14px;
+      }
+
+      .bar-row {
+        display: grid;
+        grid-template-columns: 68px minmax(0, 1fr) 38px;
+        gap: 8px;
+        align-items: center;
+      }
+
+      .bar-pct {
+        color: var(--muted);
+        font-size: 13px;
+        text-align: right;
+      }
+
+      .bar {
+        height: 8px;
+        background: #d5d5d5;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .fill {
+        display: block;
+        height: 100%;
+        border-radius: inherit;
+        background: var(--green);
+      }
+
+      .fill.low {
+        background: #b4df42;
+      }
+
+      .fill.one {
+        background: #ff4c4c;
+      }
+
+      .score-link {
+        border-top: 1px solid var(--line);
+        margin: 19px -31px 0;
+        padding: 18px 10px 24px;
+        color: #5c5c5c;
+        text-align: center;
+        font-weight: 700;
+        text-decoration: underline;
+      }
+
+      .rail-card {
+        box-shadow: none;
+        padding: 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        line-height: 1.35;
+      }
+
+      .circle-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #f0f0ec;
+        display: grid;
+        place-items: center;
+        flex: 0 0 auto;
+      }
+
+      .reviews-section {
+        background: #f5f5f1;
+        border-top: 1px solid #e2e0d8;
+        padding: 40px 0 210px;
+      }
+
+      .reviews-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr) 280px;
+        gap: 24px;
+      }
+
+      .filter-card,
+      .list-card,
+      .experience-card {
+        background: #fff;
+        border: 1px solid #ddddda;
+        border-radius: 4px;
+      }
+
+      .filter-card {
+        padding: 22px 19px;
+        align-self: start;
+      }
+
+      .filter-score {
+        display: grid;
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 12px;
+        padding-bottom: 18px;
+        border-bottom: 1px solid #e1ded8;
+        margin-bottom: 18px;
+      }
+
+      .filter-score-number {
+        font-size: 38px;
+        line-height: 0.95;
+        font-weight: 900;
+      }
+
+      .filter-score-title {
+        font-weight: 800;
+        margin-bottom: 5px;
+      }
+
+      .filter-count {
+        color: #555;
+        font-size: 13px;
+        margin-top: 6px;
+      }
+
+      .filter-write {
+        width: 100%;
+        margin-bottom: 22px;
+      }
+
+      .filter-title {
+        font-size: 20px;
+        font-weight: 800;
+        margin-bottom: 4px;
+      }
+
+      .filter-subtitle {
+        color: #555;
+        font-size: 14px;
+        margin: 0 0 15px;
+      }
+
+      .filter-line {
+        display: grid;
+        grid-template-columns: 16px 72px minmax(0, 1fr) 34px;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 0;
+        font-size: 13px;
+      }
+
+      .filter-checkbox {
+        width: 16px;
+        height: 16px;
+        border: 1px solid #b7b7b3;
+        border-radius: 2px;
+        background: #fff;
+      }
+
+      .filter-bar {
+        height: 8px;
+        background: #e5e5e5;
+        border-radius: 999px;
+        overflow: hidden;
+      }
+
+      .filter-pct {
+        color: #555;
+        text-align: right;
+        white-space: nowrap;
+      }
+
+      .filter-help {
+        display: inline-block;
+        color: #555;
+        font-size: 13px;
+        font-weight: 700;
+        margin-top: 15px;
+        text-decoration: underline;
+      }
+
+      .main-list {
+        display: grid;
+        gap: 16px;
+      }
+
+      .policy-alert {
+        background: #fff8e8;
+        border: 1px solid #e1d6b7;
+        border-radius: 4px;
+        padding: 16px 18px;
+        font-size: 14px;
+        line-height: 1.4;
+      }
+
+      .tools-row {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 130px 150px;
+        gap: 12px;
+      }
+
+      .input-like,
+      .select-like {
+        height: 46px;
+        border: 1px solid #cfcfcc;
+        border-radius: 3px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        padding: 0 14px;
+        color: #666;
+        font-size: 14px;
+      }
+
+      .select-like {
+        justify-content: space-between;
+        color: #222;
+        font-weight: 700;
+      }
+
+      .list-card {
+        padding: 20px;
+      }
+
+      .list-card.generated {
+        min-height: 178px;
+      }
+
+      .profile-link {
+        color: inherit;
+      }
+
+      .profile-link:hover strong {
+        text-decoration: underline;
+      }
+
+      .rating-stars {
+        display: inline-grid;
+        grid-template-columns: repeat(5, 16px);
+        gap: 2px;
+        margin: 2px 0;
+      }
+
+      .rating-star {
+        width: 16px;
+        height: 16px;
+        display: grid;
+        place-items: center;
+        background: #d6d6d6;
+        color: #fff;
+        font-size: 10px;
+        line-height: 1;
+      }
+
+      .rating-star.on {
+        background: var(--green);
+      }
+
+      .rating-star.bad.on {
+        background: #ff3722;
+      }
+
+      .visible-cap {
+        color: var(--muted);
+        font-size: 13px;
+        text-align: center;
+        padding: 2px 0 10px;
+      }
+
+      .list-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-bottom: 14px;
+      }
+
+      .date {
+        color: #666;
+        font-size: 13px;
+      }
+
+      .review-title {
+        font-weight: 800;
+        margin: 10px 0 6px;
+      }
+
+      .pagination {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 10px 0 4px;
+      }
+
+      .page-chip {
+        min-width: 32px;
+        height: 32px;
+        border: 1px solid #c9c9c4;
+        border-radius: 3px;
+        background: #fff;
+        color: #2f49c8;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 13px;
+        font-weight: 700;
+      }
+
+      .page-chip.active {
+        background: #1a5cf0;
+        border-color: #1a5cf0;
+        color: #fff;
+      }
+
+      .experience-card {
+        padding: 22px;
+        align-self: start;
+        line-height: 1.45;
+      }
+
+      .experience-brand {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        margin-bottom: 18px;
+        font-size: 20px;
+      }
+
+      .brand-star {
+        color: var(--green);
+        font-size: 25px;
+        line-height: 1;
+      }
+
+      .experience-card h3 {
+        margin: 0 0 10px;
+        font-size: 19px;
+      }
+
+      .experience-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 15px 0;
+        border-top: 1px solid #e2e0dc;
+        font-weight: 700;
+      }
+
+      .experience-row span:last-child {
+        color: #6a6a65;
+      }
+
+      .footer {
+        background: #171717;
+        color: #fff;
+        padding: 42px 0 50px;
+      }
+
+      .footer-inner {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 38px;
+        margin-top: 30px;
+      }
+
+      .footer h4 {
+        margin: 0 0 14px;
+        font-size: 15px;
+      }
+
+      .footer p,
+      .footer li {
+        color: #d7d7d7;
+        font-size: 13px;
+        line-height: 1.8;
+      }
+
+      .footer ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .cookie {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2147483645;
+        background: var(--panel);
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 18px 0px;
+      }
+
+      .cookie-inner {
+        display: grid;
+        grid-template-columns: minmax(0, 896px) 194px 126px 34px;
+        gap: 15px;
+        align-items: center;
+        justify-content: start;
+        max-width: none;
+        margin: 0;
+        padding: 22px 24px;
+      }
+
+      .cookie h3 {
+        margin: 0 0 14px;
+        font-size: 20px;
+      }
+
+      .cookie p {
+        margin: 0;
+        max-width: 790px;
+        font-size: 13.008px;
+        line-height: 19.512px;
+      }
+
+      .cookie-btn {
+        height: 51px;
+        border: 1px solid #111;
+        border-radius: 3px;
+        background: #fff;
+        color: #0649dd;
+        font-weight: 800;
+      }
+
+      .cookie-btn.accept {
+        border-color: #1558f5;
+        background: #1558f5;
+        color: #fff;
+      }
+
+      .x {
+        border: 0;
+        background: transparent;
+        color: #616161;
+        font-size: 28px;
+        line-height: 1;
+      }
+
+      @media (max-width: 900px) {
+        body.pixel-perfect-mode .pixel-desktop {
+          display: none;
+        }
+
+        body.pixel-perfect-mode .pixel-mobile {
+          display: block;
+        }
+
+        .top-inner,
+        .content,
+        .reviews-grid,
+        .footer-inner {
+          max-width: none;
+          width: 100%;
+        }
+
+        .top-inner {
+          padding: 0;
+        }
+
+        .mast {
+          gap: 0;
+          height: 72px;
+          padding: 0 16px;
+        }
+
+        .brand {
+          width: 140px;
+          height: 34px;
+        }
+
+        .brand img {
+          width: 140px;
+          height: auto;
+        }
+
+        .search,
+        .nav {
+          display: none;
+        }
+
+        .mobile-icons {
+          display: flex;
+        }
+
+        .breadcrumbs {
+          width: 358px;
+          height: 48px;
+          padding: 16px 0;
+          gap: 8px;
+          overflow: hidden;
+          font-size: 12px;
+        }
+
+        .breadcrumbs span:nth-child(2),
+        .breadcrumbs span:nth-child(3),
+        .breadcrumbs span:nth-child(4),
+        .breadcrumbs span:nth-child(5) {
+          display: none;
+        }
+
+        .crumb-dots {
+          display: inline;
+        }
+
+        .shell {
+          border-radius: 24px 24px 0 0;
+        }
+
+        .content {
+          padding: 16px 16px 210px;
+        }
+
+        .grid {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        .hero {
+          display: grid;
+          grid-template-columns: 150px 1fr;
+          column-gap: 15px;
+          row-gap: 8px;
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+
+        .company-logo {
+          width: 80px;
+          height: 53px;
+          font-size: 8px;
+          padding-top: 0;
+          grid-column: 1;
+        }
+
+        .hero-body {
+          display: contents;
+        }
+
+        .claim {
+          grid-column: 1 / -1;
+          justify-self: start;
+          margin: 2px 0 0;
+        }
+
+        h1 {
+          grid-column: 1 / -1;
+          font-size: 22px;
+          margin-top: 2px;
+        }
+
+        .rating-line {
+          grid-column: 1 / -1;
+          margin-top: 2px;
+          font-size: 16px;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
+        .category {
+          grid-column: 1 / -1;
+          margin-top: 2px;
+          font-size: 16px;
+        }
+
+        .actions {
+          grid-column: 1 / -1;
+          display: contents;
+        }
+
+        .btn {
+          height: 44px;
+          font-size: 14px;
+        }
+
+        .btn.site {
+          grid-column: 2;
+          grid-row: 1;
+          padding: 0 16px;
+          min-width: 0;
+          justify-self: stretch;
+        }
+
+        .btn.primary {
+          grid-column: 1 / -1;
+          width: 100%;
+          margin-top: 10px;
+        }
+
+        .notice,
+        .review-preview,
+        .company-info {
+          display: none;
+        }
+
+        .rail {
+          order: 2;
+          gap: 13px;
+        }
+
+        .important {
+          border-radius: 14px;
+        }
+
+        .important-head {
+          padding: 16px;
+          font-size: 18px;
+        }
+
+        .important-body {
+          padding: 17px 16px;
+          min-height: 75px;
+        }
+
+        .score-card {
+          display: block;
+          padding: 24px 24px 0;
+        }
+
+        .score-top {
+          grid-template-columns: 88px minmax(0, 1fr);
+          gap: 17px;
+        }
+
+        .score-number {
+          font-size: 48px;
+        }
+
+        .bars {
+          gap: 10px;
+        }
+
+        .bar-row {
+          grid-template-columns: 76px minmax(0, 1fr) 40px;
+          font-size: 13px;
+        }
+
+        .score-link {
+          margin-left: -24px;
+          margin-right: -24px;
+        }
+
+        .rail-card {
+          display: flex;
+        }
+
+        .reviews-section {
+          padding: 26px 16px 230px;
+        }
+
+        .reviews-grid {
+          display: block;
+        }
+
+        .filter-card,
+        .experience-card {
+          display: none;
+        }
+
+        .tools-row {
+          grid-template-columns: 1fr;
+        }
+
+        .list-card {
+          margin-top: 14px;
+        }
+
+        .footer {
+          display: none;
+        }
+
+        .cookie-inner {
+          display: flex;
+          flex-direction: column;
+          align-items: stretch;
+          gap: 13px;
+          padding: 23px 19px 25px;
+        }
+
+        .cookie h3 {
+          font-size: 20px;
+          margin-bottom: 8px;
+          padding-right: 30px;
+        }
+
+        .cookie p {
+          font-size: 14px;
+          line-height: 1.35;
+        }
+
+        .cookie-btn {
+          width: 100%;
+          height: 51px;
+        }
+
+        .x {
+          position: absolute;
+          top: 22px;
+          right: 17px;
+          font-size: 29px;
+        }
+      }
+
+      @media (min-width: 901px) {
+      }
+
+      @media (min-width: 901px) and (max-width: 1260px) {
+        .top-inner,
+        .content,
+        .reviews-grid,
+        .footer-inner {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="pixel-shell" aria-label="Replica visual pixel-perfect de Trustpilot">
+      <img class="pixel-shot pixel-desktop" src="../../assets/trustpilot/pixel/desktop-full.png" alt="Replica visual desktop de Trustpilot">
+      <img class="pixel-shot pixel-mobile" src="../../assets/trustpilot/pixel/mobile-full.png" alt="Replica visual mobile de Trustpilot">
+    </div>
+    <header class="top">
+      <div class="top-inner">
+        <div class="mast">
+          <div class="brand" aria-label="Trustpilot">
+            <img src="../../assets/trustpilot/logo-white.svg" alt="Opiniones de Trustpilot">
+          </div>
+          <div class="search">
+            <svg class="search-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle>
+              <path d="m16.5 16.5 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            <span>Buscar otra empresa...</span>
+          </div>
+          <nav class="nav" aria-label="Navegacion principal">
+            <a href="#">Categorías</a>
+            <a href="#">Blog</a>
+            <span class="bell" aria-hidden="true"></span>
+            <a href="#">Iniciar sesión</a>
+            <a class="business" href="#">Para empresas</a>
+          </nav>
+          <div class="mobile-icons" aria-hidden="true">
+            <svg class="mobile-bell" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              <path d="M10 21h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            <svg class="search-svg" viewBox="0 0 24 24" aria-hidden="true">
+              <circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"></circle>
+              <path d="m16.5 16.5 4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+            </svg>
+            <span class="hamb"><span></span><span></span><span></span></span>
+          </div>
+        </div>
+        <div class="breadcrumbs">
+          <span class="crumb-dots">•••</span>
+          <span>Finanzas y seguros</span>
+          <span>›</span>
+          <span>Inversión y patrimonio</span>
+          <span>›</span>
+          <span>Servicios financieros alternativos</span>
+          <span>›</span>
+          <span>julibenutti.com</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <section class="content">
+        <div class="grid">
+          <div>
+            <section class="hero" aria-label="Resumen de empresa">
+              <a class="company-logo-link" href="https://julibenutti.com" aria-label="Ir a julibenutti.com">
+                <img class="company-logo" src="../../assets/trustpilot/blueprint-sistema-propio-cover.png" alt="Portada Sistema Propio de Julieta Benutti">
+              </a>
+              <div class="hero-body">
+                <div class="claim"><span class="check">✓</span> Perfil reclamado</div>
+                <h1><a class="company-title-link" href="https://julibenutti.com">julibenutti.com</a></h1>
+                <div class="rating-line">
+                  <a href="#opiniones-completas" style="text-decoration: underline;">33 opiniones</a>
+                  <span>·</span>
+                  <span class="stars" aria-label="5 estrellas">
+                    <img class="stars-img" src="../../assets/trustpilot/stars-5.svg" alt="TrustScore: 5 sobre 5">
+                  </span>
+                  <strong>4,9</strong>
+                  <span class="info-dot">i</span>
+                </div>
+                <a class="category" href="#">Servicios financieros alternativos</a>
+                <div class="actions">
+                  <a class="btn primary" href="#">✎ Escribir una opinión</a>
+                  <a class="btn site" href="https://julibenutti.com">Visitar el sitio web ↗</a>
+                </div>
+              </div>
+            </section>
+
+            <div class="notice">
+              <div style="display: flex; gap: 12px; align-items: center;">
+                <img class="shield" src="../../assets/trustpilot/trustpilot-shield.svg" alt="">
+                <span>Usamos tecnología para proteger la integridad de la plataforma pero no comprobamos la información de las opiniones</span>
+              </div>
+              <span>⌄</span>
+            </div>
+
+            <section class="review-preview">
+              <h2>Consulta las opiniones de los clientes <span class="info-dot">i</span></h2>
+              <div class="mini-reviews">
+                <article class="review-mini" data-profile-url="/users/?id=6a1ef2a34a5f81e0477f799c">
+                  <div class="author">
+                    <div class="avatar">MA</div>
+                    <div>
+                      <strong>mariana</strong>
+                      <span>AR · 5 jun 2026</span>
+                    </div>
+                  </div>
+                  <img class="stars-img small" src="../../assets/trustpilot/stars-5.svg" alt="Valorada con 5 estrellas sobre 5">
+                  <p class="mini-text">Hace rato venía buscando algoritmos para XAUUSD y no encontraba nada que me cerrara. Con este método me cayó la ficha de que estaba buscando el santo grial. <a class="more" href="/users/?id=6a1ef2a34a5f81e0477f799c">Ver más</a></p>
+                  <div class="review-actions"><span>♧ Útil</span><span>⌘ Compartir</span><span>⚐</span></div>
+                </article>
+                <article class="review-mini" data-profile-url="/users/?id=69fca00b2c1727e7b585ef3d">
+                  <div class="author">
+                    <div class="avatar purple">MD</div>
+                    <div>
+                      <strong>Mati Di Santolo</strong>
+                      <span>AR · 17 abr 2026</span>
+                    </div>
+                  </div>
+                  <img class="stars-img small" src="../../assets/trustpilot/stars-5.svg" alt="Valorada con 5 estrellas sobre 5">
+                  <p class="mini-text">Buen material. Me sirvió para entender cómo empezar a pasar reglas a Claude sin programar. <a class="more" href="/users/?id=69fca00b2c1727e7b585ef3d">Ver más</a></p>
+                  <div class="review-actions"><span>♧ Útil</span><span>⌘ Compartir</span><span>⚐</span></div>
+                </article>
+                <article class="review-mini" data-profile-url="/users/?id=69df95180653b77473653875">
+                  <div class="author">
+                    <div class="avatar blue">MG</div>
+                    <div>
+                      <strong>Mag Giannussi</strong>
+                      <span>AR · 29 may 2026</span>
+                    </div>
+                  </div>
+                  <img class="stars-img small" src="../../assets/trustpilot/stars-5.svg" alt="Valorada con 5 estrellas sobre 5">
+                  <p class="mini-text">Me gustó porque no promete plata fácil. Te muestra el proceso, los errores y cómo ir armando algo propio con datos. <a class="more" href="/users/?id=69df95180653b77473653875">Ver más</a></p>
+                  <div class="review-actions"><span>♧ Útil</span><span>⌘ Compartir</span><span>⚐</span></div>
+                </article>
+                <article class="review-mini" data-profile-url="/users/?id=6867cc1b18a3fc8089faa81a">
+                  <div class="author">
+                    <div class="avatar orange">LV</div>
+                    <div>
+                      <strong>Laura Vilchez</strong>
+                      <span>AR · 8 abr 2026</span>
+                    </div>
+                  </div>
+                  <img class="stars-img small" src="../../assets/trustpilot/stars-5.svg" alt="Valorada con 5 estrellas sobre 5">
+                  <p class="mini-text">Yo no sabía bien cómo usar Claude para algo práctico. Con este PDF entendí qué pedirle y cómo revisar si lo que devuelve tiene sentido. <a class="more" href="/users/?id=6867cc1b18a3fc8089faa81a">Ver más</a></p>
+                  <div class="review-actions"><span>♧ Útil</span><span>⌘ Compartir</span><span>⚐</span></div>
+                </article>
+              </div>
+              <div class="reviews-more">
+                <a class="btn" href="#opiniones-completas">Ver las 33 opiniones</a>
+              </div>
+            </section>
+
+            <section class="company-info" aria-label="Informacion sobre la empresa">
+              <h2>Información sobre la empresa</h2>
+              <div class="company-grid">
+                <div class="company-panel">
+                  <a class="company-chip" href="https://julibenutti.com">julibenutti.com</a>
+                  <h3>Escrito por la creadora</h3>
+                  <p>Sistema Propio es una guía para construir con IA un algoritmo de trading propio: sin señales, sin copy-trading y sin promesas de plata fácil. Parte de experiencia real, reglas claras y backtests para que cada trader arme, entienda y valide su propio sistema.</p>
+                </div>
+                <div class="company-panel">
+                  <h3>Información de contacto</h3>
+                  <div class="info-list">
+                    <div class="info-row"><span>⌂</span><span>Argentina</span></div>
+                    <div class="info-row"><span>↗</span><span><a href="https://julibenutti.com">julibenutti.com</a></span></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <aside class="rail" aria-label="Informacion de TrustScore">
+            <section class="important">
+              <div class="important-head"><span class="info-dot" style="border-color:#222;color:#222;">i</span> Información importante</div>
+              <div class="important-body">
+                <span>Esta empresa podría estar asociada a inversiones de alto riesgo.</span>
+                <strong>›</strong>
+              </div>
+            </section>
+
+            <section class="score-card">
+              <div class="score-top">
+                <div>
+                  <div class="score-number">4,9</div>
+                  <div class="excellent">Excelente</div>
+                  <img class="stars-img rail-stars" src="../../assets/trustpilot/stars-5.svg" alt="TrustScore: 5 sobre 5">
+                  <div class="count">33 opiniones</div>
+                </div>
+                <div class="bars">
+                  <div class="bar-row"><span>5 estrellas</span><span class="bar"><span class="fill" style="width: 95%;"></span></span><span class="bar-pct">95%</span></div>
+                  <div class="bar-row"><span>4 estrellas</span><span class="bar"><span class="fill low" style="width: 3%;"></span></span><span class="bar-pct">3%</span></div>
+                  <div class="bar-row"><span>3 estrellas</span><span class="bar"><span class="fill" style="width: 1%;"></span></span><span class="bar-pct">&lt;1%</span></div>
+                  <div class="bar-row"><span>2 estrellas</span><span class="bar"><span class="fill" style="width: 1%;"></span></span><span class="bar-pct">&lt;1%</span></div>
+                  <div class="bar-row"><span>1 estrella</span><span class="bar"><span class="fill one" style="width: 2%;"></span></span><span class="bar-pct">2%</span></div>
+                </div>
+              </div>
+              <div class="score-link">¿Cómo se calcula el TrustScore?</div>
+            </section>
+
+            <section class="rail-card"><span>☏</span><span>No ha contestado las opiniones negativas</span></section>
+            <section class="rail-card">
+              <span class="circle-icon">▥</span>
+              <span><strong>Así usa esta empresa Trustpilot</strong><br>Descubre cómo se obtienen, puntúan y moderan sus opiniones y valoraciones.</span>
+              <span>↗</span>
+            </section>
+          </aside>
+        </div>
+      </section>
+
+      <section id="opiniones-completas" class="reviews-section">
+        <div class="reviews-grid">
+          <aside class="filter-card">
+            <div class="filter-score">
+              <div class="filter-score-number">4,9</div>
+              <div>
+                <div class="filter-score-title">Excelente</div>
+                <img class="stars-img rail-stars" src="../../assets/trustpilot/stars-5.svg" alt="TrustScore: 5 sobre 5">
+                <div class="filter-count">33 opiniones</div>
+              </div>
+            </div>
+            <a class="btn primary filter-write" href="#">✎ Escribir una opinión</a>
+            <div class="filter-title">Todas las opiniones</div>
+            <p class="filter-subtitle">33 en total</p>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>5 estrellas</span><span class="filter-bar"><span class="fill" style="display:block;width:95%;"></span></span><span class="filter-pct">95%</span></div>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>4 estrellas</span><span class="filter-bar"><span class="fill low" style="display:block;width:3%;"></span></span><span class="filter-pct">3%</span></div>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>3 estrellas</span><span class="filter-bar"><span class="fill" style="display:block;width:1%;"></span></span><span class="filter-pct">&lt;1%</span></div>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>2 estrellas</span><span class="filter-bar"><span class="fill" style="display:block;width:1%;"></span></span><span class="filter-pct">&lt;1%</span></div>
+            <div class="filter-line"><span class="filter-checkbox"></span><span>1 estrella</span><span class="filter-bar"><span class="fill one" style="display:block;width:2%;"></span></span><span class="filter-pct">2%</span></div>
+            <a class="filter-help" href="#">Cómo clasifica Trustpilot las opiniones dadas las 33 opiniones</a>
+          </aside>
+
+          <div class="main-list">
+            <div class="policy-alert"><strong>Trustpilot no permite ofrecer incentivos por opiniones.</strong> Las valoraciones se revisan para proteger la integridad de la plataforma.</div>
+            <div class="tools-row">
+              <div class="input-like">⌕ Buscar opiniones</div>
+              <div class="select-like">Más filtros <span>⌄</span></div>
+              <div class="select-like">Más recientes <span>⌄</span></div>
+            </div>
+          </div>
+
+          <aside class="experience-card">
+            <div class="experience-brand"><span class="brand-star">★</span><strong>Trustpilot</strong></div>
+            <h3>La experiencia Trustpilot</h3>
+            <p>Las opiniones ayudan a otras personas a comparar empresas y entender experiencias reales antes de decidir.</p>
+            <div class="experience-row"><span>Todo el mundo es bienvenido</span><span>⌄</span></div>
+            <div class="experience-row"><span>Promovemos las opiniones verificadas</span><span>⌄</span></div>
+            <div class="experience-row"><span>Luchamos contra las reseñas falsas</span><span>⌄</span></div>
+            <div class="experience-row"><span>Mostramos opiniones recientes</span><span>⌄</span></div>
+            <div class="experience-row"><span>Fomentamos el feedback constructivo</span><span>⌄</span></div>
+            <div class="experience-row"><span>Verificamos a los revisores</span><span>⌄</span></div>
+            <div class="experience-row"><span>Combatimos el sesgo</span><span>⌄</span></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="brand"><img src="../../assets/trustpilot/logo-white.svg" alt="Opiniones de Trustpilot"></div>
+        <div class="footer-grid">
+          <div><h4>Quiénes somos</h4><ul><li>Sobre nosotros</li><li>Empleo</li><li>Contacto</li><li>Blog</li></ul></div>
+          <div><h4>Comunidad</h4><ul><li>Confianza</li><li>Opiniones</li><li>Centro de ayuda</li></ul></div>
+          <div><h4>Empresas</h4><ul><li>Planes</li><li>Productos</li><li>Recursos</li></ul></div>
+          <div><h4>Síguenos en</h4><ul><li>LinkedIn</li><li>X</li><li>Facebook</li><li>Instagram</li></ul></div>
+          <div><h4>España</h4><p>Privacidad · Términos · Cookies · Accesibilidad</p></div>
+        </div>
+      </div>
+    </footer>
+
+    <section class="cookie" aria-label="Aviso de cookies">
+      <div class="cookie-inner">
+        <div>
+          <h3>Utilizamos cookies</h3>
+          <p>Utilizamos cookies para personalizar el contenido y los anuncios, para permitir las funcionalidades con las redes sociales y para analizar nuestro tráfico. También compartimos información sobre el uso que haces de nuestro sitio web con nuestros socios para redes sociales, publicidad y análisis. Si continúas navegando en nuestro sitio web, estás aceptando el uso de todas las cookies.</p>
+        </div>
+        <button class="cookie-btn">Configuración de cookies</button>
+        <button class="cookie-btn accept">Entendido</button>
+        <button class="x" aria-label="Cerrar">×</button>
+      </div>
+    </section>
+    <script src="../../assets/trustpilot/profiles.js?v=single-juli-review-20260606"></script>
+    <script>
+      (() => {
+        const escapeHTML = (value) => String(value).replace(/[&<>"']/g, (char) => ({
+          "&": "&amp;",
+          "<": "&lt;",
+          ">": "&gt;",
+          "\"": "&quot;",
+          "'": "&#39;"
+        }[char]));
+
+        const renderStars = (rating) => Array.from({ length: 5 }, (_, index) => {
+          const active = index < rating ? "on" : "";
+          const tone = rating <= 2 && index < rating ? "bad" : "";
+          return `<span class="rating-star ${active} ${tone}">★</span>`;
+        }).join("");
+
+        document.querySelectorAll(".review-mini a.more").forEach((link) => {
+          link.addEventListener("click", (event) => {
+            event.preventDefault();
+            window.location.href = link.getAttribute("href");
+          });
+        });
+
+        document.querySelectorAll(".review-mini[data-profile-url]").forEach((card) => {
+          card.addEventListener("click", (event) => {
+            if (event.target.closest("a")) return;
+            window.location.href = card.dataset.profileUrl;
+          });
+        });
+
+        document.querySelectorAll('a[href="#opiniones-completas"]').forEach((link) => {
+          link.addEventListener("click", (event) => {
+            const target = document.querySelector("#opiniones-completas");
+            if (!target) return;
+            event.preventDefault();
+            target.scrollIntoView({ behavior: "smooth", block: "start" });
+            history.replaceState(null, "", "#opiniones-completas");
+          });
+        });
+
+        const mainList = document.querySelector(".main-list");
+        if (mainList) {
+          const visibleProfiles = (window.trustpilotCloneData || []).slice(0, 33);
+          mainList.querySelectorAll(".list-card, .pagination, .visible-cap").forEach((item) => item.remove());
+          document.querySelector(".filter-subtitle").textContent = `${visibleProfiles.length} visibles de 33`;
+
+          visibleProfiles.forEach((profile, index) => {
+            const primaryReview = profile.reviews?.[0] || profile;
+            const article = document.createElement("article");
+            article.className = "list-card generated";
+            const avatarClass = index % 4 === 1 ? "avatar purple" : index % 4 === 2 ? "avatar blue" : index % 4 === 3 ? "avatar orange" : "avatar";
+            article.innerHTML = `
+              <div class="list-head">
+                <a class="author profile-link" style="margin:0;" href="${escapeHTML(profile.profileUrl)}">
+                  <div class="${avatarClass}">${escapeHTML(profile.initials)}</div>
+                  <div><strong>${escapeHTML(profile.name)}</strong><span> ${escapeHTML(profile.country)} · ${escapeHTML(profile.reviewCount)}</span></div>
+                </a>
+                <span class="date">${escapeHTML(profile.displayDate)}</span>
+              </div>
+              <div class="rating-stars" aria-label="${primaryReview.rating} estrellas">${renderStars(primaryReview.rating)}</div>
+              <div class="review-title">${escapeHTML(primaryReview.title)}</div>
+              <p class="mini-text" style="margin-bottom: 10px;">${escapeHTML(primaryReview.body)}</p>
+              <div class="meta-line date">${escapeHTML(primaryReview.date || profile.experienceDate)} · ${escapeHTML(primaryReview.type || "Opinión espontánea")}</div>
+              <div class="review-actions"><span>♧ Útil</span><span>⌘ Compartir</span><a href="${escapeHTML(profile.profileUrl)}">Ver perfil</a></div>
+            `;
+            mainList.appendChild(article);
+          });
+
+          const pagination = document.createElement("div");
+          pagination.className = "visible-cap";
+          pagination.textContent = `Se muestran ${visibleProfiles.length} reseñas. Cada reseñador abre un perfil local con sus opiniones.`;
+          mainList.appendChild(pagination);
+        }
+
+        const cookie = document.querySelector(".cookie");
+        const closeButtons = document.querySelectorAll(".cookie .accept, .cookie .x");
+        closeButtons.forEach((button) => {
+          button.addEventListener("click", () => cookie?.remove());
+        });
+      })();
+    </script>
+  </body>
+</html>

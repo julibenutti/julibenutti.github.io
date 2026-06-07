@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Perfil de usuario - Trustpilot mockup</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%2300b67a' d='M16 1.5l3.7 10.1h10.8l-8.7 6.4 3.4 10.5-9.2-6.3-9.2 6.3 3.4-10.5-8.7-6.4h10.8z'/%3E%3C/svg%3E">
+    <style>
+      @font-face {
+        font-display: swap;
+        font-family: "Trustpilot Sans";
+        font-style: normal;
+        font-weight: 300 700;
+        src: url("../assets/trustpilot/fonts/Trustpilot-Sans.woff2") format("woff2");
+      }
+
+      :root {
+        --ink: #1f241f;
+        --muted: #62625d;
+        --line: #ddd9d2;
+        --bg: #f9f8f5;
+        --panel: #fff;
+        --green: #00b67a;
+        --blue: #3c57bc;
+        --black: #171717;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Trustpilot Sans", Arial, sans-serif;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      .top {
+        background: var(--black);
+        color: #fff;
+      }
+
+      .top-inner {
+        max-width: 1180px;
+        margin: 0 auto;
+        min-height: 78px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 24px;
+      }
+
+      .brand {
+        width: 150px;
+      }
+
+      .brand img {
+        display: block;
+        width: 150px;
+      }
+
+      .back {
+        color: #8aa3ff;
+        font-weight: 700;
+      }
+
+      main {
+        max-width: 1120px;
+        margin: 0 auto;
+        padding: 34px 24px 80px;
+      }
+
+      .profile-grid {
+        display: grid;
+        grid-template-columns: 310px minmax(0, 1fr);
+        gap: 28px;
+        align-items: start;
+      }
+
+      .card {
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+      }
+
+      .profile-card {
+        padding: 26px;
+        position: sticky;
+        top: 20px;
+      }
+
+      .avatar {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        background: #d9fbe0;
+        display: grid;
+        place-items: center;
+        font-size: 28px;
+        font-weight: 800;
+      }
+
+      .profile-card h1 {
+        margin: 18px 0 6px;
+        font-size: 28px;
+        line-height: 1.1;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      .stat-row {
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid var(--line);
+        margin-top: 22px;
+        padding-top: 14px;
+        font-weight: 700;
+      }
+
+      .feed-head {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        align-items: end;
+        margin-bottom: 16px;
+      }
+
+      .feed-head h2 {
+        margin: 0;
+        font-size: 26px;
+      }
+
+      .review-card {
+        padding: 22px;
+        margin-bottom: 14px;
+      }
+
+      .review-top {
+        display: flex;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 12px;
+      }
+
+      .company {
+        font-weight: 800;
+      }
+
+      .domain {
+        display: block;
+        color: var(--muted);
+        font-size: 14px;
+        margin-top: 3px;
+      }
+
+      .stars {
+        display: inline-grid;
+        grid-template-columns: repeat(5, 18px);
+        gap: 2px;
+      }
+
+      .star {
+        width: 18px;
+        height: 18px;
+        display: grid;
+        place-items: center;
+        background: #d6d6d6;
+        color: #fff;
+        font-size: 12px;
+        line-height: 1;
+      }
+
+      .star.on {
+        background: var(--green);
+      }
+
+      .star.bad.on {
+        background: #ff3722;
+      }
+
+      .review-card h3 {
+        margin: 10px 0 8px;
+        font-size: 18px;
+      }
+
+      .review-card p {
+        margin: 0 0 14px;
+        line-height: 1.45;
+      }
+
+      .meta-line {
+        color: var(--muted);
+        font-size: 14px;
+      }
+
+      @media (max-width: 760px) {
+        .top-inner {
+          min-height: 70px;
+        }
+
+        .brand,
+        .brand img {
+          width: 138px;
+        }
+
+        main {
+          padding: 20px 16px 60px;
+        }
+
+        .profile-grid {
+          display: block;
+        }
+
+        .profile-card {
+          position: static;
+          margin-bottom: 18px;
+        }
+
+        .feed-head {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="top">
+      <div class="top-inner">
+        <a class="brand" href="/review/julibenutti.com/"><img src="../assets/trustpilot/logo-white.svg" alt="Opiniones de Trustpilot"></a>
+        <a class="back" href="/review/julibenutti.com/">Volver a julibenutti.com</a>
+      </div>
+    </header>
+
+    <main>
+      <div class="profile-grid">
+        <aside class="card profile-card" id="profileCard"></aside>
+        <section>
+          <div class="feed-head">
+            <h2>Opiniones</h2>
+            <span class="muted" id="reviewCount"></span>
+          </div>
+          <div id="reviewFeed"></div>
+        </section>
+      </div>
+    </main>
+
+    <script src="../assets/trustpilot/profiles.js?v=single-juli-review-20260606"></script>
+    <script>
+      (() => {
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get("id");
+        const review = params.get("review");
+        const profiles = window.trustpilotCloneData || [];
+        const profile = profiles.find((item) => item.id === id && (!review || item.reviewId === review)) || profiles.find((item) => item.id === id) || profiles[0];
+        const profileCard = document.querySelector("#profileCard");
+        const reviewFeed = document.querySelector("#reviewFeed");
+        const reviewCount = document.querySelector("#reviewCount");
+
+        const stars = (rating) => Array.from({ length: 5 }, (_, index) => {
+          const active = index < rating ? "on" : "";
+          const tone = rating <= 2 && index < rating ? "bad" : "";
+          return `<span class="star ${active} ${tone}">★</span>`;
+        }).join("");
+
+        document.title = `${profile.name} - Perfil de Trustpilot mockup`;
+        profileCard.innerHTML = `
+          <div class="avatar">${profile.initials}</div>
+          <h1>${profile.name}</h1>
+          <div class="muted">${profile.country} · ${profile.reviewCount}</div>
+          <div class="stat-row"><span>Opiniones</span><span>${profile.reviews.length}</span></div>
+          <div class="stat-row"><span>Última actividad</span><span>${profile.displayDate}</span></div>
+        `;
+
+        reviewCount.textContent = `${profile.reviews.length} opiniones publicadas`;
+        reviewFeed.innerHTML = profile.reviews.map((review) => `
+          <article class="card review-card">
+            <div class="review-top">
+              <div>
+                <span class="company">${review.company}</span>
+                <span class="domain">${review.domain}</span>
+              </div>
+              <span class="meta-line">${review.date}</span>
+            </div>
+            <div class="stars" aria-label="${review.rating} estrellas">${stars(review.rating)}</div>
+            <h3>${review.title}</h3>
+            <p>${review.body}</p>
+            <div class="meta-line">${review.type}</div>
+          </article>
+        `).join("");
+      })();
+    </script>
+  </body>
+</html>

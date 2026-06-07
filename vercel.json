@@ -1,0 +1,46 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/review/myfundedfutures.com",
+      "destination": "/review/julibenutti.com",
+      "permanent": false
+    },
+    {
+      "source": "/review/myfundedfutures.com/index.html",
+      "destination": "/review/julibenutti.com/index.html",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/review/julibenutti.com",
+      "destination": "/review/julibenutti.com/index.html"
+    },
+    {
+      "source": "/users",
+      "destination": "/users/index.html"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/trustpilot/profiles.js",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store, max-age=0"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ]
+}
